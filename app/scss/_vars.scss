@@ -6,11 +6,20 @@ $md: 768px;
 $sm: 576px;
 $xs: 374px;
 
-%gilroy-900 {
+%gilroy-500 {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 500;
+}
+
+%gilroy-600 {
+  font-family: "Gilroy", sans-serif;
+  font-weight: 600;
+}
+
+%gilroy-700 {
   font-family: "Gilroy", sans-serif;
   font-weight: 700;
 }
-
 
 
 %checkbox-hidden,
