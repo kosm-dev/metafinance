@@ -3,7 +3,14 @@ body {
   height: 100%;
 }
 
-body {}
+body {
+  @extend %gilroy-500;
+  font-size: 14px;
+  color: #4a4a4a;
+  background-color: #fff;
+  min-width: 320px;
+  overflow-x: hidden;
+}
 
 .lock {
   overflow: hidden;
@@ -32,10 +39,10 @@ body {}
 }
 
 .container {
-  max-width: 1180px;
+  max-width: 1660px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 // style
