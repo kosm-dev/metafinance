@@ -18,6 +18,25 @@ document.addEventListener("DOMContentLoaded", () => {
       }
   }
 
+
+
+  if (document.querySelector('.header')) {
+    headerScroll('.header');
+  }
+
+
+
+  function headerScroll(headerClass) {
+    const header = document.querySelector(headerClass);
+    window.onscroll = () => {
+      if (window.scrollY > 0) {
+        header.classList.add('header--scroll');
+      }
+      else {
+        header.classList.remove('header--scroll');
+      }
+    };
+  }
   
 
 

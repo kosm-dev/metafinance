@@ -70,16 +70,12 @@ body {
   }
 }
 
-
 @media (max-width: 992px) {
-   .burger {
+  .burger {
     order: -1;
     display: block;
   }
 }
-
-
-
 
 // button
 
@@ -124,5 +120,36 @@ body {
   color: #fff;
   &__icon {
     margin-left: 8px;
+  }
+}
+
+.link-extra {
+  display: flex;
+  align-items: center;
+  @extend %gilroy-700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+  &__icon {
+    margin-left: 12px;
+  }
+}
+
+.title {
+  @extend %gilroy-700;
+  font-size: 36px;
+  color: #000;
+}
+
+@media (max-width: 992px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .link-extra {
+    font-size: 12px;
+    line-height: 17px;
   }
 }
