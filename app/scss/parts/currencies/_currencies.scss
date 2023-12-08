@@ -1,0 +1,37 @@
+.currencies {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 0 34px;
+
+    padding: 13px 40px 13px 25px;
+    border: 1px solid #E6E6E6;
+    overflow-x: auto;
+  }
+  &__list-item {
+    display: flex;
+    align-items: center;
+    gap: 0 11px;
+  }
+}
+.currencies-item {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #000;
+  &__name {
+    @extend %gilroy-700;
+    margin-right: 11px;
+  }
+  &__value {
+    @extend %gilroy-500;
+  }
+}
+
+@media(max-width: 1200px) {
+  .currencies {
+    display: none;
+  }
+}
+
+
