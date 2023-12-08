@@ -1,0 +1,73 @@
+.footer {
+  padding-top: 74px;
+  padding-bottom: 45px;
+  background-color: #000;
+  
+  &__logo {
+    margin-bottom: 49px;
+  }
+  &__logo .logo__text {
+    color: #fff;
+  }
+  &__socials {
+    margin-bottom: 178px;
+  }
+}
+.socials {
+  &__title {
+    @extend %gilroy-500;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 23px;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+}
+.footer-copy {
+  display: flex;
+  align-items: center;
+  &__info {
+    margin-right: 125px;
+    @extend %gilroy-700;
+    font-size: 16px;
+    color: #fff;
+  }
+  &__items {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+  &__item {
+    @extend %gilroy-500;
+    font-size: 16px;
+    color: #fff;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer__socials {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  .footer-copy {
+    flex-direction: column;
+    gap: 20px 0;
+    align-items: flex-start;
+  }
+  .footer-copy__items {
+    gap: 10px;
+  }
+  .footer-copy__item {
+    font-size: 14px;
+    color: #fff;
+  }
+}
