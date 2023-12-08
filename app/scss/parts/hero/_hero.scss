@@ -1,0 +1,115 @@
+.main {
+  &__hero {
+    padding-top: 160px;
+    padding-bottom: 184px;
+  }
+}
+.hero {
+  &__wrapper {
+    position: relative;
+  }
+  &__content {
+    min-height: 736px;
+    position: relative;
+    padding-top: 52px;
+    padding-left: 95px;
+    padding-right: 95px;
+    padding-bottom: 77px;
+    border-radius: 36px;
+    background: linear-gradient(91deg, #2d32ff 1.55%, #2629aa 99.49%);
+  }
+  &__content::after {
+    content: "";
+    position: absolute;
+    top: 173px;
+    left: 640px;
+    width: 235px;
+    height: 235px;
+    background-image: url("../images/hero/subtract.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__content::before {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 285px;
+    width: 440px;
+    height: 355px;
+    background-image: url("../images/hero/vector.svg");
+    background-repeat: no-repeat;
+  }
+  &__nav {
+    margin-bottom: 43px;
+    width: 100%;
+    max-width: 615px;
+  }
+  &__title {
+    margin-bottom: 31px;
+    width: 100%;
+    max-width: 594px;
+    @extend %gilroy-700;
+    font-size: 64px;
+    color: #fff;
+  }
+  &__text {
+    margin-bottom: 55px;
+    width: 100%;
+    max-width: 519px;
+    @extend %gilroy-500;
+    font-size: 20px;
+    color: #fff;
+  }
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__btn {
+    margin-bottom: 99px;
+  }
+}
+
+.hero-image {
+  &__one,
+  &__two {
+    position: absolute;
+    z-index: 2;
+  }
+  &__one {
+    top: 383px;
+    right: 113px;
+  }
+  &__one img {
+    border-radius: 26px;
+  }
+  &__two {
+    top: 136px;
+    right: 65px;
+    z-index: 1;
+  }
+}
+
+.hero-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+  
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    min-height: 41px;
+    min-width: 132px;
+    @extend %gilroy-500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #fff;
+
+    border-radius: 38px;
+    border: 3px solid #fff;
+  }
+}

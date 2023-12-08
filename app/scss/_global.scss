@@ -49,54 +49,80 @@ body {
 
 // burger
 .burger {
-  position: relative;
   display: none;
-  width: 30px;
-  height: 20px;
   cursor: pointer;
-  // z-index: 11;
+  padding: 5px;
+  z-index: 7;
+  &__open {
+    width: 14px;
+  }
+  &__close {
+    width: 14px;
+    display: none;
+  }
+  &.active {
+    .burger__open {
+      display: none;
+    }
+    .burger__close {
+      display: block;
+    }
+  }
 }
 
-.burger::before,
-.burger::after {
-  content: "";
-  background: linear-gradient(90deg, #ec656d 0%, #ef914f 100%);
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  left: 0;
-  transition: all 0.3s;
+
+@media (max-width: 992px) {
+   .burger {
+    order: -1;
+    display: block;
+  }
 }
 
-.burger::before {
-  top: 0;
+
+
+
+// button
+
+.btn-special {
+  display: flex;
+  align-items: center;
+  padding: 15px 30px;
+  border-radius: 12px;
+  background: #f1f1f1;
+
+  @extend %gilroy-500;
+  font-size: 16px;
+  color: #000;
+  &__icon {
+    margin-right: 24px;
+  }
+  &__icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+  }
 }
 
-.burger::after {
-  bottom: 0;
+.btn {
+  display: inline-block;
+  min-width: 204px;
+  min-height: 53px;
+  padding: 15px 53px;
+  @extend %gilroy-700;
+  font-size: 16px;
+  color: #000;
+  line-height: 22px;
+  border-radius: 6px;
+  background: #fff;
 }
 
-.burger span {
-  display: block;
-  position: absolute;
-  background: linear-gradient(90deg, #ec656d 0%, #ef914f 100%);
-  top: 9px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  transition: all 0.3s;
-}
-
-.burger--active::before {
-  transform: rotate(45deg);
-  top: 9px;
-}
-
-.burger--active::after {
-  transform: rotate(-45deg);
-  bottom: 9px;
-}
-
-.burger--active span {
-  transform: scale(0);
+.link-about {
+  display: flex;
+  align-items: center;
+  @extend %gilroy-700;
+  font-size: 16px;
+  color: #fff;
+  &__icon {
+    margin-left: 8px;
+  }
 }
