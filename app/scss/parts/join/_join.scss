@@ -1,0 +1,122 @@
+.join {
+  margin-bottom: 289px;
+  &__title {
+    margin-bottom: 69px;
+  }
+  &__wrap {
+    display: flex;
+    padding: 56px 63px 71px 57px;
+    border-radius: 16px;
+    background: #f9f9f9;
+  }
+}
+
+.join-form {
+  width: 100%;
+  max-width: 502px;
+  margin-right: 35px;
+  &__labels {
+    margin-bottom: 41px;
+    display: flex;
+    flex-direction: column;
+    gap: 41px 0;
+  }
+  &__label {
+    display: block;
+    position: relative;
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 11px;
+    cursor: pointer;
+  }
+  &__input {
+    height: 61px;
+    width: 100%;
+    display: block;
+
+    padding: 23px 22px 23px 56px;
+    border-radius: 6px;
+    border: 1px solid #dfdfdf;
+    background-color: #f9f9f9;
+    @extend %gilroy-600;
+    font-size: 16px;
+  }
+
+  &__input::placeholder {
+    @extend %gilroy-600;
+    font-size: 16px;
+    color: #575757;
+  }
+  &__check {
+    margin-bottom: 27px;
+    display: flex;
+    align-items: center;
+    @extend %gilroy-700;
+    font-size: 16px;
+    color: #000;
+    cursor: pointer;
+  }
+  &__check a {
+    color: #2d32ff;
+    margin-left: 5px;
+  }
+  &__check input {
+    @extend %checkbox-hidden;
+  }
+  &__checkbox {
+    position: relative;
+    width: 27px;
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 26px;
+    border-radius: 3px;
+    border: 1px solid #a9f9c4;
+    background: #2d32ff;
+    cursor: pointer;
+  }
+  &__check input + .join-form__checkbox > svg {
+    transition: all 0.2s;
+  }
+  &__check input:checked + .join-form__checkbox > svg {
+    opacity: 0;
+    transition: all 0.2s;
+    visibility: hidden;
+  }
+  &__btns {
+    margin-bottom: 27px;
+  }
+  &__btn {
+    display: block;
+    width: 100%;
+    min-height: 56px;
+    font-size: 16px;
+    @extend %gilroy-700;
+    color: #fff;
+    border-radius: 6px;
+    background: #2d32ff;
+    border: none;
+    padding: 19px;
+    cursor: pointer;
+  }
+  &__info {
+    text-align: center;
+    font-size: 16px;
+    @extend %gilroy-700;
+    color: #000;
+  }
+  &__info a {
+    color: #2d32ff;
+    margin-left: 5px;
+  }
+}
+
+.join-img {
+  padding-top: 45px;
+  width: 100%;
+  max-width: 975px;
+}
