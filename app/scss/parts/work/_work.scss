@@ -1,0 +1,29 @@
+.work {
+  margin-bottom: 155px;
+  &__title {
+    margin-bottom: 114px;
+  }
+  
+  &__items {
+    display: flex;
+    gap: 0 127px;
+    margin-bottom: 68px;
+  
+  }
+}
+
+.work-item {
+  width: 100%;
+  max-width: 285px;
+  &__title {
+    margin-bottom: 18px;
+    @extend %gilroy-700;
+    font-size: 16px;
+    color: #000;
+  }
+  &__text {
+    @extend %gilroy-500;
+    font-size: 14px;
+    color: #4a4a4a;
+  }
+}
