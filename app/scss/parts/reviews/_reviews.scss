@@ -1,0 +1,357 @@
+.reviews {
+  margin-bottom: 84px;
+}
+
+.reviews-board {
+  margin-bottom: 36px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 189px;
+  padding-bottom: 150px;
+  padding-left: 96px;
+  padding-right: 88px;
+  position: relative;
+  border-radius: 36px;
+  background: #131313;
+  &__img {
+    position: absolute;
+    left: 57px;
+    bottom: 191px;
+    z-index: 3;
+  }
+}
+.reviews-info {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  padding-right: 50px;
+  padding-bottom: 100px;
+  &__avatar {
+    margin-right: 26px;
+    width: 96px;
+    height: 96px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  &__avatar img {
+    object-fit: cover;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+  }
+  &__name {
+    margin-bottom: 8px;
+    @extend %gilroy-700;
+    font-size: 24px;
+  }
+  &__position {
+    @extend %gilroy-500;
+    font-size: 16px;
+  }
+}
+
+.reviews-content {
+  position: relative;
+  z-index: 5;
+  &__wrap {
+    width: 100%;
+    max-width: 700px;
+    @extend %gilroy-700;
+    font-size: 48px;
+    line-height: 62px;
+    color: #fff;
+  }
+  &__start,
+  &__end {
+    position: relative;
+  }
+  &__start > .quotes {
+    position: absolute;
+    top: -11px;
+    left: -75px;
+  }
+  &__end > .quotes {
+    position: absolute;
+    right: -75px;
+  }
+}
+
+.finance-board {
+  position: relative;
+  height: 391px;
+  border-radius: 36px;
+  background: #131313;
+  overflow: hidden;
+  padding-top: 88px;
+  padding-left: 99px;
+  padding-bottom: 95px;
+  &__title {
+    position: relative;
+    z-index: 5;
+    margin-bottom: 26px;
+    @extend %gilroy-700;
+    font-size: 64px;
+    color: #fff;
+  }
+  &__items {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 640px;
+    display: flex;
+    align-items: center;
+    gap: 0 65px;
+  }
+  &__img {
+    position: absolute;
+    top: -86px;
+    right: 76px;
+  }
+}
+.finance-item {
+  position: relative;
+  padding-right: 65px;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: -27px;
+    width: 1px;
+    height: 129px;
+    background-color: #252525;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+  &:last-child:after {
+    display: none;
+  }
+  &__value {
+    @extend %gilroy-700;
+    font-size: 64px;
+    color: #fff;
+  }
+  &__plus {
+    color: #2d32ff;
+  }
+  &__text {
+    @extend %gilroy-500;
+    font-size: 24px;
+    color: #fff;
+  }
+}
+
+.quotes {
+  display: inline-block;
+  @extend %gilroy-700;
+  font-size: 128px;
+  color: #252525;
+}
+@media (max-width: 1600px) {
+  .reviews-board {
+    padding-top: 100px;
+    padding-bottom: 150px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .reviews-content__wrap {
+    width: 100%;
+    max-width: 700px;
+    font-size: 36px;
+    line-height: 56px;
+    color: #fff;
+  }
+  .quotes {
+    font-size: 90px;
+  }
+  .reviews-board__img {
+    left: 25px;
+    bottom: 50px;
+  }
+  .finance-board__title {
+    font-size: 55px;
+  }
+  .finance-item__value {
+    font-size: 55px;
+  }
+  .finance-board__img {
+    position: absolute;
+    top: -86px;
+    right: 0px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .reviews-content__wrap {
+    max-width: 450px;
+    font-size: 24px;
+    line-height: 44px;
+  }
+
+  .finance-board__img {
+    max-width: 550px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+  }
+  .finance-board__title {
+    font-size: 45px;
+  }
+  .finance-item__value {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .reviews-board {
+    flex-direction: column;
+  }
+
+  .reviews-content__wrap {
+    max-width: none;
+  }
+  .quotes {
+    font-size: 96px;
+  }
+  .reviews-content__start > .quotes {
+    top: -60px;
+    left: -20px;
+  }
+  .reviews-content__end > .quotes {
+    right: -35px;
+    top: 50px;
+  }
+  .reviews-board__img {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+  }
+
+  .finance-board {
+    height: auto;
+    padding-top: 50px;
+    padding-left: 70px;
+    padding-bottom: 50px;
+  }
+  .finance-board__img {
+    max-width: 385px;
+  }
+}
+
+@media (max-width: 992px) {
+  .finance-board__img {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews {
+    margin-bottom: 183px;
+}
+  .reviews-board {
+    padding-top: 53px;
+    padding-bottom: 200px;
+    padding-left: 33px;
+    padding-right: 33px;
+  }
+
+  .reviews-content__wrap {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .reviews-info__name {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .reviews-info__position {
+    font-size: 12px;
+  }
+
+  .reviews-info {
+    margin-right: auto;
+    padding-right: 0;
+    padding-bottom: 100px;
+  }
+  .reviews-info__avatar {
+    width: 52px;
+    height: 52px;
+  }
+
+  .reviews-board__img {
+    top: 179px;
+    bottom: auto;
+  }
+
+  .finance-board {
+    padding-top: 21px;
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-bottom: 44px;
+  }
+  .finance-board__title {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+
+  .finance-item {
+    display: flex;
+    align-items: center;
+    padding-right: 23px;
+  }
+  .finance-item__value {
+    font-size: 16px;
+  }
+  .finance-item__text {
+    font-size: 16px;
+    margin-left: 9px;
+  }
+
+  .finance-item:first-child > .finance-item__text {
+    display: none;
+  }
+
+  .finance-item::after {
+    top: 50%;
+    height: 27px;
+    transform: translateY(-50%);
+  }
+  .finance-board__items {
+    
+    gap: 0 9px;
+}
+}
+
+@media (max-width: 480px) {
+  .reviews-info {
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
+  }
+  .reviews-info__avatar {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .reviews-board__img {
+    top: 300px;
+    bottom: auto;
+  }
+}
+
+
+@media (max-width: 375px) {
+.finance-item__value {
+  font-size: 12px;
+}
+.finance-item__text {
+  font-size: 12px;
+}
+}
